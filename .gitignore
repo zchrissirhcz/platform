@@ -1,0 +1,10 @@
+build/
+cmake-build-*/
+a.out
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+.DS_Store
