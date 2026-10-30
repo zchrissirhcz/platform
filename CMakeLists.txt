@@ -13,7 +13,7 @@ target_compile_features(platform INTERFACE cxx_std_11)
 
 enable_testing()
 
-set(PLATFORM_TESTS os compiler arch simd)
+set(PLATFORM_TESTS os compiler arch simd thread)
 foreach(name IN LISTS PLATFORM_TESTS)
     add_executable(test_${name} tests/test_${name}.cpp)
     target_link_libraries(test_${name} PRIVATE platform)
