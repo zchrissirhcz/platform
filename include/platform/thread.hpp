@@ -3,6 +3,17 @@
 #pragma once
 
 #if defined _WIN32
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#elif defined __ANDROID__ || defined __OHOS__ || defined __linux__ || __APPLE__
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/mman.h>
+#include <fcntl.h>
+#include <unistd.h>
+#endif
+
+#if defined _WIN32
 #include <process.h>
 #else
 #include <pthread.h>
